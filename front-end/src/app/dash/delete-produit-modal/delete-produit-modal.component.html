@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-sm-12 text-center">
+        <mat-icon style="font-size: 4rem; color: red !important;margin-left: -4rem;">warning</mat-icon>
+    </div>
+    <div class="col-sm-12 text-center">
+        <h2>
+            Êtes-vous sûr ?</h2>
+    </div>
+    <div class="col-sm-12 text-center" style="margin-bottom: 2rem;">
+
+        Ce Produit sera supprimé.
+    </div>
+    <div class="col-sm-12 text-center">
+        <button class="btn btn-default" (click)="closeModal()">Annuler</button>
+        <span style="padding: 3rem 1rem;"></span>
+        <button class="btn btn-success" (click)="delete()">Approuver</button>
+    </div>
+</div>

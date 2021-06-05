@@ -1,0 +1,40 @@
+<div *ngIf="product">
+    <div class="row">
+        <div class="col-12">
+            <span style="font-size: 1.5rem;">Name: {{product.nom | uppercase}}</span>
+            <span style="flex: 1 1 auto;"></span>
+            <span (click)="onNoClick()" style="cursor: pointer;float: right;margin-top: -4px;">
+                <mat-icon>close</mat-icon>
+            </span>
+        </div>
+    </div>
+    <div class="row">
+        <img [src]=product.image alt="" class="col-12">
+    </div>
+    <div class="row">
+        <span class="col-12">
+            <h2>Details:</h2>
+            <div class="row">
+                <div class="col-12" *ngIf="product.description">
+                    <strong>Description:</strong> {{product.description}}
+                </div>
+                <div class="col-12" *ngIf="product.categorie">
+                    <strong>Category:</strong> {{product.categorie}}
+                </div>
+                <div class="col-12" *ngIf="product.code">
+                    <strong>Code:</strong> {{product.code}}
+                </div>
+                <div class="col-12" *ngIf="product.prix">
+                    <strong>Prix:</strong> {{product.prix}}
+                </div>
+                <div class="col-12" *ngIf="product.reference">
+                    <strong>Reference:</strong> {{product.reference}}
+                </div>
+            </div>
+        </span>
+    </div>
+</div>
+<!-- <div mat-dialog-actions>
+    <button mat-button>No Thanks</button>
+    <button mat-button [mat-dialog-close]="product.image" cdkFocusInitial>Ok</button>
+</div> -->
