@@ -29,6 +29,9 @@ import { DialogComponent } from './common/dialog/dialog.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { DeleteProduitModalComponent } from './dash/delete-produit-modal/delete-produit-modal.component';
+import { ConfirmDialogComponent } from './common/confirm-dialog/confirm-dialog.component';
+import { ConfirmBuyComponent } from './commandef/confirm-buy/confirm-buy.component';
+import { PrintComponentComponent } from './print-component/print-component.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +49,10 @@ import { DeleteProduitModalComponent } from './dash/delete-produit-modal/delete-
     ListeProduitsComponent,
     CommandefComponent,
     DialogComponent,
-    DeleteProduitModalComponent
+    DeleteProduitModalComponent,
+    ConfirmDialogComponent,
+    ConfirmBuyComponent,
+    PrintComponentComponent
 
   ],
   imports: [

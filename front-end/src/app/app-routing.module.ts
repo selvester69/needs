@@ -16,52 +16,52 @@ import { ProduitDetailComponent } from './produit-detail/produit-detail.componen
 
 const routes: Routes = [
   {
-    path:"",
-    component : LandingPageComponent
+    path: "",
+    component: LandingPageComponent
   },
   {
-    path : "produits",
-    component : ProduitsComponent
+    path: "produits",
+    component: ProduitsComponent
   },
   {
-    path : "services",
-    component : ServicesComponent
+    path: "services",
+    component: ServicesComponent
   },
   {
-    path : "signin",
-    component : SigninComponent
+    path: "signin",
+    component: SigninComponent
   },
   {
-    path : "signup",
-    component : SignupComponent
+    path: "signup",
+    component: SignupComponent
   },
   {
-    path : "dashboard",
-    component : DashboardComponent
+    path: "dashboard",
+    component: DashboardComponent
   },
   {
-    path : "ajouterproduit",
-    component : AjouterProduitComponent
+    path: "ajouterproduit",
+    component: AjouterProduitComponent
   },
   {
-    path : "listeclients",
-    component : ListeClientsComponent
+    path: "listeclients",
+    component: ListeClientsComponent
   },
   {
-    path : "listeproduits",
-    component : ListeProduitsComponent
+    path: "listeproduits",
+    component: ListeProduitsComponent
   },
   {
-    path : "profil",
-    component : ProfilComponent
+    path: "profil",
+    component: ProfilComponent
   },
   {
-    path:"commandef",
-    component : CommandefComponent
+    path: "commandef/:id",
+    component: CommandefComponent
   },
   {
-    path:"detailsproduit/:id",
-    component : ProduitDetailComponent
+    path: "detailsproduit/:id",
+    component: ProduitDetailComponent
   }
 ];
 

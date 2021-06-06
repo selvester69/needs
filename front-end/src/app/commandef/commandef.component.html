@@ -19,37 +19,42 @@
 
 
 
-    <form style="font-size: large; border:3px solid black; margin-left:30px;margin-right: 30px; background-color: white; padding:30px; border-radius: 30px;">
+    <form #heroForm="ngForm"
+        style="font-size: large; border:3px solid black; margin-left:30px;margin-right: 30px; background-color: white; padding:30px; border-radius: 30px;">
         <div class="form-row" style="border: white;">
             <div class="form-group col-md-6">
-                <label for="inputEmail4" >Nom</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Ecrire Votre nom"
-                    style="max-width:400px; margin-left:30px;">
+                <label for="inputEmail4">Nom</label>
+                <input type="email" name="Nom" class="form-control" id="inputEmail4" placeholder="Ecrire Votre nom"
+                    style="max-width:400px; margin-left:30px;" [(ngModel)]="userForm.Nom">
             </div>
             <div class="form-group col-md-6">
                 <label for="inputPassword4">Prénom</label>
-                <input type="password" class="form-control" id="inputPassword4" placeholder="Ecrire Votre Prénom"
-                    style="width: 500px; margin-left:15px; ">
+                <input type="password" name="Prenom" class="form-control" id="inputPassword4"
+                    placeholder="Ecrire Votre Prénom" style="width: 500px; margin-left:15px;"
+                    [(ngModel)]="userForm.Prenom">
             </div>
         </div>
         <div class="form-group">
             <label for="inputAddress" style="margin-left: 250px;">Addresse</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="Ecrire Votre Adresse "
-                style=" margin-left:250px; width: 600px;">
+            <input type="text" name="Addresse" class="form-control" id="inputAddress"
+                placeholder="Ecrire Votre Adresse " style=" margin-left:250px; width: 600px;"
+                [(ngModel)]="userForm.Addresse">
         </div>
         <div class="form-group">
             <label for="inputAddress2" style="margin-left: 250px;">Email</label>
-            <input type="text" class="form-control" id="inputAddress2" placeholder="Ecriver votre Email @"
-                style="margin-left:250px; width: 600px;">
+            <input type="text" name="Email" class="form-control" id="inputAddress2" placeholder="Ecriver votre Email @"
+                style="margin-left:250px; width: 600px;" [(ngModel)]="userForm.Email">
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="inputCity">Numéro de Télephone : </label>
-                <input type="text" class="form-control" id="inputCity" style="width: 500px; margin-left:15px;" style="width: 500px; margin-left:15px;">
+                <input type="text" name="Telephone" class="form-control" id="inputCity"
+                    style="width: 500px; margin-left:15px;" style="width: 500px; margin-left:15px;"
+                    [(ngModel)]="userForm.Telephone">
             </div>
             <div class="form-group col-md-4">
                 <label for="inputState">Ville</label>
-                <select id="inputState" class="form-control">
+                <select id="inputState" class="form-control" [(ngModel)]="userForm.Ville" name="Ville">
                     <option selected>Choose...</option>
                     <option selected>Ariana</option>
                     <option>Béja</option>
@@ -80,9 +85,10 @@
                 </select>
             </div>
         </div>
-       
-    
-        <button type="submit" class="btn btn-primary" style="margin-left: 1000px;">Valider</button>
+
+
+        <button type="submit" class="btn btn-primary" style="margin-left: 1000px;"
+            (click)="onValidier()">Valider</button>
         <button type="submit" class="btn btn-primary" style="margin-left: 1118px; margin-top:-60px;">Exit</button>
 
     </form>

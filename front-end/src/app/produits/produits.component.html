@@ -85,10 +85,11 @@
                     <div class="portfolio-info">
                         <h4>{{prod.nom}}</h4>
                         <p>{{prod.description}}</p>
-                        <span data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"
-                            (click)="onPreview(prod)"><i class="bx bx-plus"></i></span>
-                        <a href="portfolio-details.html" class="details-link" title="More Details"><i
-                                class="bx bx-link"></i></a>
+                        <span class="preview-link" title="Web 3" (click)="onPreview(prod)"><i
+                                class="bx bx-plus"></i></span>
+                        <span class="details-link" title="More Details" (click)="onMoreDetail(prod)"><i
+                                class="bx bx-link"></i></span>
+                        <!-- <a class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
                     </div>
                 </div>
                 <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">

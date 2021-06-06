@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="row">
+            <h2>User Detail</h2>
+            <div class="col-sm-12">
+                <div>{{user.Nom}}</div>
+                <!-- <div>{{user.Prenom}}</div> -->
+                <div>{{user.Addresse}}</div>
+                <div>{{user.Email}}</div>
+                <div>{{user.Telephone}}</div>
+                <div>{{user.Ville}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <h2>Product Detail</h2>
+            <div class="col-sm-12">
+                <img [src]="prod.image" alt="">
+                <div>{{prod.nom}}</div>
+                <div>{{prod.categorie}}</div>
+                <div>{{prod.description}}</div>
+                <div>{{prod.prix}}</div>
+                <div>{{prod.reference}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <button class="btn btn-success" (click)="confirm()">Confirm</button>
+        <button class="btn btn-danger" (click)="cancel()">Cancel</button>
+    </div>
+
+</div>

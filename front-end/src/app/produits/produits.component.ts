@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
+import { ConfirmDialogComponent } from '../common/confirm-dialog/confirm-dialog.component';
 import { DialogComponent } from '../common/dialog/dialog.component';
 import { ProduitService } from '../produit.service';
 
@@ -13,7 +15,8 @@ export class ProduitsComponent implements OnInit {
   prodList: any[] = [];
   filter = filterListConst;
   selectedFilter: any;
-  constructor(private produitService: ProduitService, public dialog: MatDialog) { }
+  constructor(private produitService: ProduitService, public dialog: MatDialog,
+    private router: Router) { }
   FilterClick(filter) {
     this.selectedFilter = filter;
   }
@@ -39,6 +42,17 @@ export class ProduitsComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
       // this.animal = result;
+    });
+  }
+  onMoreDetail(prod) {
+    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+      width: '50vw',
+      data: {}
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.router.navigate(['commandef', prod._id]);
+      }
     });
   }
 
